@@ -1,0 +1,50 @@
+{
+  "aadProfile": null,
+  "addonProfiles": null,
+  "agentPoolProfiles": [
+    {
+      "count": 1,
+      "maxPods": 110,
+      "name": "nodepool1",
+      "osDiskSizeGb": null,
+      "osType": "Linux",
+      "storageProfile": "ManagedDisks",
+      "vmSize": "Standard_DS2_v2",
+      "vnetSubnetId": null
+    }
+  ],
+  "dnsPrefix": "ignite-dem-ignite-demo-df4aff",
+  "enableRbac": true,
+  "fqdn": "ignite-dem-ignite-demo-df4aff-bdbd39c0.hcp.eastus.azmk8s.io",
+  "id": "/subscriptions/df4aff33-3507-48d9-a24c-3439ab6b3079/resourcegroups/ignite-demo/providers/Microsoft.ContainerService/managedClusters/ignite-demo",
+  "kubernetesVersion": "1.9.9",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJTT7xwmq07zkrwBijirL+lvQis++ymJD1IcExU0cEkIqt/l+SYq7iiGQpuCzweQTgHYv4qGbcjZPAIwl3UyNLxLHDGb5a2vvjbJMiRBv/4NQZrjcXFgKTn89Aqfe5nh/+Sr7eyz+QKUwoMGIh8fn+GeaQrPqeGSOK+A9W18FunL+HdsXWE0cIpcwt7yc4fGg6cObC9Nqzx8rAiZ27ghmjhBXQuQJcODiU3etfz+V8jzmiewrxXChJm01vyOZpa2JdS+/h+mSZfTvhkFhSwZJBiJ69NzLoT8bdM0aqjpPsu5Ux/4kdFdLCldyliOo2p0hblzkQVpyhrik1kJb3u7/b"
+        }
+      ]
+    }
+  },
+  "location": "eastus",
+  "name": "ignite-demo",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "networkPlugin": "kubenet",
+    "networkPolicy": null,
+    "podCidr": "10.244.0.0/16",
+    "serviceCidr": "10.0.0.0/16"
+  },
+  "nodeResourceGroup": "MC_ignite-demo_ignite-demo_eastus",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "ignite-demo",
+  "servicePrincipalProfile": {
+    "clientId": "ef584bb4-da5c-460b-a1df-ddd381088f23",
+    "secret": null
+  },
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters"
+}

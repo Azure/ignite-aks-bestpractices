@@ -1,0 +1,10 @@
+{
+  "id": "/subscriptions/df4aff33-3507-48d9-a24c-3439ab6b3079/resourceGroups/ignite-demo",
+  "location": "eastus",
+  "managedBy": null,
+  "name": "ignite-demo",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null
+}

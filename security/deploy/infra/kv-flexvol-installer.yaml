@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kv
+---
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    app: keyvault-flexvolume
+  name: keyvault-flexvolume
+  namespace: kv
+spec:
+  template:
+    metadata:
+      labels:
+        app: keyvault-flexvolume
+    spec:
+      tolerations:
+      containers:
+        # * if you have used flex before on your cluster, use same directory
+        # set TARGET_DIR env var and mount the same directory to to the container
+      - name: flexvol-driver-installer
+        image: "mcr.microsoft.com/k8s/flexvolume/keyvault-flexvolume:v0.0.4"
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 50m
+            memory: 10Mi
+          limits:
+            cpu: 50m
+            memory: 10Mi
+        env:
+        #forces the container not to exit 
+        # to solve for this https://github.com/kubernetes/kubernetes/issues/17182
+        # until it is fixed
+        - name: TARGET_DIR
+          value: "/etc/kubernetes/volumeplugins"
+        volumeMounts:
+        - mountPath: "/etc/kubernetes/volumeplugins"
+          name: volplugins
+      volumes:
+      - hostPath:
+          path: "/etc/kubernetes/volumeplugins" #Modify this directory if your nodes are using a different one
+        name: volplugins
+      nodeSelector:
+        beta.kubernetes.io/os: linux
