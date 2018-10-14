@@ -19,10 +19,10 @@ spec:
       driver: "azure/kv"
       options:
         usepodidentity: "true"
-        keyvaultname: KEYVAULT_NAME
-        keyvaultobjectname: SECRET_NAME
+        keyvaultname: aksignitekv
+        keyvaultobjectname: testsecret
         keyvaultobjecttype: secret # OPTIONS: secret, key, cert
-        keyvaultobjectversion: SECRET_VERSION
-        resourcegroup: RESOURCE_GROUP
-        subscriptionid: SUB_ID
-        tenantid: TENANT_ID
+        keyvaultobjectversion: cc104971b06b4beaafe1cd4728275708 
+        resourcegroup: MC_ignite-demo_ignite-demo_eastus
+        subscriptionid: df4aff33-3507-48d9-a24c-3439ab6b3079
+        tenantid: 72f988bf-86f1-41af-91ab-2d7cd011db47

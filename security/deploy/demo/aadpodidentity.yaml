@@ -4,5 +4,5 @@ metadata:
  name: demo-aad1
 spec:
  type: 0
- ResourceID: RESOURCE_ID
- ClientID: CLIENT_ID 
+ ResourceID: /subscriptions/df4aff33-3507-48d9-a24c-3439ab6b3079/resourcegroups/MC_ignite-demo_ignite-demo_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/demo-aad1
+ ClientID: ca8e90bd-cee2-451c-a5e4-8cab08068ae5 
