@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-quota-dep
+  namespace: ignite
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      run: nginx-quota-dep
+  template:
+    metadata:
+      labels:
+        run: nginx-quota-dep
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: Always
+        name: nginx-quota-dep
+        resources:
+          requests:
+            memory: "250M"
+            cpu: "0.25"
+          limits:
+            memory: "250M"
+            cpu: "0.25"
+    
+        

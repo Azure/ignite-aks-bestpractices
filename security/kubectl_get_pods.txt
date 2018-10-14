@@ -1,0 +1,4 @@
+NAME                  READY     STATUS    RESTARTS   AGE
+mic-56f76486f-tkfdj   1/1       Running   0          1h
+nginx-flex-kv-podid   1/1       Running   0          12s
+nmi-kgjx4             1/1       Running   0          1h

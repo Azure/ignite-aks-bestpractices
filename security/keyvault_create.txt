@@ -1,0 +1,79 @@
+{
+  "id": "/subscriptions/df4aff33-3507-48d9-a24c-3439ab6b3079/resourceGroups/MC_ignite-demo_ignite-demo_eastus/providers/Microsoft.KeyVault/vaults/aksignitekv",
+  "location": "eastus",
+  "name": "aksignitekv",
+  "properties": {
+    "accessPolicies": [
+      {
+        "applicationId": null,
+        "objectId": "febf609b-90d8-4d63-bffb-c12ccb094696",
+        "permissions": {
+          "certificates": [
+            "get",
+            "list",
+            "delete",
+            "create",
+            "import",
+            "update",
+            "managecontacts",
+            "getissuers",
+            "listissuers",
+            "setissuers",
+            "deleteissuers",
+            "manageissuers",
+            "recover"
+          ],
+          "keys": [
+            "get",
+            "create",
+            "delete",
+            "list",
+            "update",
+            "import",
+            "backup",
+            "restore",
+            "recover"
+          ],
+          "secrets": [
+            "get",
+            "list",
+            "set",
+            "delete",
+            "backup",
+            "restore",
+            "recover"
+          ],
+          "storage": [
+            "get",
+            "list",
+            "delete",
+            "set",
+            "update",
+            "regeneratekey",
+            "setsas",
+            "listsas",
+            "getsas",
+            "deletesas"
+          ]
+        },
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+      }
+    ],
+    "createMode": null,
+    "enablePurgeProtection": null,
+    "enableSoftDelete": null,
+    "enabledForDeployment": false,
+    "enabledForDiskEncryption": null,
+    "enabledForTemplateDeployment": null,
+    "networkAcls": null,
+    "provisioningState": "Succeeded",
+    "sku": {
+      "name": "standard"
+    },
+    "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "vaultUri": "https://aksignitekv.vault.azure.net/"
+  },
+  "resourceGroup": "MC_ignite-demo_ignite-demo_eastus",
+  "tags": {},
+  "type": "Microsoft.KeyVault/vaults"
+}

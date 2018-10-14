@@ -1,0 +1,30 @@
+#show your ingress and the tls certificate 
+kubectl get deployment nginx-ingress
+#show the loaded secret
+ kubectl describe deployment nginx-ingress
+#show the secret (returns 404 not found in case there is no default server)
+ kubectl get secret default-server-secret -o yaml 
+
+#show the service
+kubectl get svc nginx-ingress
+
+#create the cafe application
+kubectl apply -f cafe.yaml
+
+#check if everything is working, note there is no need for an external IP here, Ingress will handle this for you
+kubectl get deployment coffee tea
+kubectl get svc tea-svc coffee-svc
+
+
+#create the secret
+kubectl apply -f cafe-secret.yaml
+
+#create the ingress resource
+kubectl apply -f cafe-ingress.yaml
+
+#create the record in DNS 
+dig +short cafe.linux-jo.com
+
+
+#delete everything
+kubectl delete -f .
